@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/tailwindcss','@nuxtjs/google-fonts','@pinia/nuxt'
+    '@nuxtjs/tailwindcss','@nuxtjs/google-fonts','@pinia/nuxt','nuxt-icon'
   ],
   googleFonts: {
     families: {
