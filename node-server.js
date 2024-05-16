@@ -1,7 +1,5 @@
-import {createRequire} from 'module'
-const require = createRequire(import.meta.url)
+import puppeteer from "puppeteer";
 
-const puppeteer = require('puppeteer');
 
 const extractItems = async(page)  => {
     let maps_data = await page.evaluate(() => {
@@ -57,81 +55,10 @@ const extractItems = async(page)  => {
       });
   
       let data = await scrollPage(page, ".m6QErb[aria-label]", 10);
-  
+
+    //   return data
       console.log(data);
   
-      // await browser.close();
   };
   
-  getMapsData();
-
-//     (async () => {
-//   // Launch the browser and open a new blank page
-//   const browser = await puppeteer.launch({ headless: false });
-//   const page = await browser.newPage();
-
-//   // Navigate the page to a URL
-//   await page.goto('https://www.google.com/maps/search/restaurant/@33.6079744,73.0180172,16z/data=!3m1!4b1?entry=ttu');
-
-//   const places = await extractItems(page);
-
-//   await scrollPage(page);
-
-//   console.log(places)
-
-// })();
-
-
-
-
-// import puppeteer from 'puppeteer';
-
-// async function autoScroll(page) {
-//   await page.evaluate(async () => {
-//     await new Promise((resolve) => {
-//       var totalHeight = 0;
-//       var distance = 300;
-//       var timer = setInterval(() => {
-//         const element = document.querySelector('.aIFcqe'); // Replace '.your-container-selector' with the appropriate CSS selector for your container
-//         var scrollHeight =  element.scrollHeight // Scroll the container's content vertically
-//         totalHeight += distance;
-
-//         if (totalHeight >= scrollHeight) {
-//           clearInterval(timer);
-//           resolve();
-//         }
-//       }, 100);
-//     });
-//   });
-// }
-
-// async function parsePlaces (page){
-// let places = [];
-
-// const elements = await page.$$('.qBF1Pd')
-// if(elements && elements.length){
-//     for (const el of elements){
-//         const name = await el.evaluate(div => div.textContent)
-
-//         places.push({ name })
-//     }
-// }
-// return places;
-
-// }
-
-// (async () => {
-//   // Launch the browser and open a new blank page
-//   const browser = await puppeteer.launch({ headless: false });
-//   const page = await browser.newPage();
-
-//   // Navigate the page to a URL
-//   await page.goto('https://www.google.com/maps/search/restaurant/@33.6079744,73.0180172,16z/data=!3m1!4b1?entry=ttu');
-
-//   const places = await parsePlaces(page);
-
-//   await autoScroll(page);
-
-//   console.log(places)
-
-// })();
+ getMapsData();

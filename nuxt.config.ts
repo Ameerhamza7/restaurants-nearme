@@ -1,12 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/tailwindcss','@nuxtjs/google-fonts'
+    '@nuxtjs/tailwindcss','@nuxtjs/google-fonts','@pinia/nuxt'
   ],
   googleFonts: {
     families: {
       Poppins: true,
     }
-  }
+  },
+  
 })
