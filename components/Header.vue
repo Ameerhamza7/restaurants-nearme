@@ -3,7 +3,7 @@
         <nuxt-link to="/">
         <div class="h-full flex items-center hover:scale-105 transition-all duration-100 ease-in cursor-pointer">
             <p class=" font-medium text-lg text-white bg-[#FF9F1C] py-2 px-3 rounded-md">Restaurants</p>
-            <p class=" font-medium text-lg py-3 px-1 rounded-md">Nearme_Pasha</p>
+            <p class=" font-medium text-lg py-3 px-1 rounded-md">Nearme</p>
         </div>
     </nuxt-link>
 
