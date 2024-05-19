@@ -29,7 +29,7 @@ const data = ref("");
 
 const press = async () => {
   router.push('./products/')
-  axios.get("https://restaurant-nearme.netlify.app/.netlify/functions/proxy/path-to-resource")
+  axios.get("https://restaurant-nearme.netlify.app/.netlify/functions/proxy")
     .then((map) => {
       console.log(map.data);
       data.value = map.data;
