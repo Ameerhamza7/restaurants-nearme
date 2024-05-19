@@ -29,7 +29,7 @@ const data = ref("");
 
 const press = async () => {
   router.push('./products/')
-  axios.get("http://localhost:8888/api")
+  axios.get("https://fascinating-daifuku-8a0ca0.netlify.app")
     .then((map) => {
       console.log(map.data);
       data.value = map.data;
