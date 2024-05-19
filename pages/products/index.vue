@@ -22,9 +22,7 @@
   </div>
   <h1 class="text-center text-2xl font-medium">Restaurants</h1>
   <div class="grid grid-cols-3 place-items-center">
-    <div
-      class="w-[30rem] m-10 p-3 rounded drop-shadow-lg overflow-hidden bg-white hover:bg-[#ffdeb0] transition-all duration-75"
-      v-for="item in data">
+    <div class="w-[30rem] m-10 p-3 rounded drop-shadow-lg overflow-hidden bg-white hover:bg-[#ffdeb0] transition-all duration-75"  v-for="item in data" :key="item.dataId">
       <nuxt-link class="cursor-pointer" @click="openDetail(item.title)" >
       <div class="flex items-center p-2">
         <img
@@ -59,7 +57,7 @@ const data = ref("");
 
 const press = async () => {
   axios
-    .get("http://localhost:8888/api")
+    .get("https://fascinating-daifuku-8a0ca0.netlify.app")
     .then((map) => {
       console.log(map.data);
       data.value = map.data;
