@@ -13,7 +13,7 @@
     </nuxt-link>
 
     <nuxt-link to="/products" class="rounded px-4 flex items-center h-3/4 hover:bg-[#e9e9e9] transition-all duration-75 ease-in">
-        <h1>RESTAURANTS</h1>
+        <h1>RESULTS</h1>
     </nuxt-link>
     </div>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-      <div class="flex justify-between items-center p-[1rem] rounded-l-lg border w-[20rem] bg-white cursor-pointer" @click="toggleDropdown">
+      <div class="flex justify-between items-center p-[1rem] w-[12rem] bg-white cursor-pointer" @click="toggleDropdown">
         <span>{{ selectedCity ? selectedCity.name : 'Select your city' }}</span>
         <Icon name="material-symbols:arrow-drop-down" class="" />
       </div>
